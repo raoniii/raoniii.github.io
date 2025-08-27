@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Raoni Ferreira — Portfólio • Mobile, n8n & Bots</title>
+  <meta name="description" content="Portfólio de projetos em desenvolvimento mobile, automações com n8n e robôs de atendimento (incluindo WhatsApp)." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+          colors: { brand: { DEFAULT: '#10b981', dark: '#0ea37f' } },
+          boxShadow: { soft: '0 10px 30px -10px rgba(0,0,0,0.25)' }
+        }
+      },
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    /* Animações sutis */
+    .float { animation: float 6s ease-in-out infinite; }
+    @keyframes float { 0%,100%{ transform: translateY(0) } 50%{ transform: translateY(-6px) } }
+  </style>
+</head>
+<body class="bg-white text-slate-800 dark:bg-slate-950 dark:text-slate-100">
+  <!-- Barra de navegação -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 dark:bg-slate-950/50 border-b border-slate-200/60 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#home" class="font-extrabold tracking-tight text-xl">Raoni<span class="text-brand">.</span></a>
+      <nav class="hidden md:flex items-center gap-6 font-medium">
+        <a class="hover:text-brand" href="#projetos">Projetos</a>
+        <a class="hover:text-brand" href="#servicos">Serviços</a>
+        <a class="hover:text-brand" href="#sobre">Sobre</a>
+        <a class="hover:text-brand" href="#contato">Contato</a>
+      </nav>
+      <div class="flex items-center gap-2">
+        <button id="themeToggle" class="p-2 rounded-xl border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-900" aria-label="Alternar tema">🌙</button>
+        <a href="#contato" class="hidden sm:inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold py-2 px-4 rounded-xl shadow-soft">
+          Fale comigo
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 grid md:grid-cols-2 gap-12 items-center">
+      <div>
+        <p class="uppercase tracking-widest text-xs font-semibold text-brand mb-3">Desenvolvimento Mobile • n8n • Bots</p>
+        <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight mb-5">Eu crio apps e automações que reduzem custo e aumentam conversão.</h1>
+        <p class="text-lg text-slate-600 dark:text-slate-300 mb-8">Especialista em <span class="font-semibold">Flutter</span> (BLoC), integrações com <span class="font-semibold">n8n</span> e robôs de atendimento (incluindo <span class="font-semibold">WhatsApp</span>) para captação, suporte e vendas.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#projetos" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold py-3 px-5 rounded-xl shadow-soft">Ver projetos</a>
+          <a href="#contato" class="inline-flex items-center gap-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900 font-semibold py-3 px-5 rounded-xl">Solicitar orçamento</a>
+        </div>
+        <div class="mt-6 flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+          <span>⏱️ Resposta média em 1 dia</span>
+          <span>🔒 Contratos e NDA</span>
+          <span>💳 PJ • Boleto • Pix</span>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="float w-full aspect-[4/3] rounded-2xl bg-gradient-to-br from-emerald-200 via-emerald-400 to-emerald-600 dark:from-emerald-800 dark:via-emerald-700 dark:to-emerald-600" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Selos/Stacks -->
+  <section class="py-10 border-y border-slate-200 dark:border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-wrap items-center justify-center gap-6 opacity-90">
+      <span class="text-sm">Flutter • BLoC • Dart</span>
+      <span class="text-slate-400">•</span>
+      <span class="text-sm">n8n • Webhooks • APIs</span>
+      <span class="text-slate-400">•</span>
+      <span class="text-sm">Bots • WhatsApp • Dialogflow</span>
+      <span class="text-slate-400">•</span>
+      <span class="text-sm">AWS • GCP • Amplify</span>
+    </div>
+  </section>
+
+  <!-- Projetos -->
+  <section id="projetos" class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-end justify-between mb-10">
+        <div>
+          <h2 class="text-3xl font-extrabold">Projetos em destaque</h2>
+          <p class="text-slate-600 dark:text-slate-300">Alguns trabalhos recentes em mobile, n8n e robôs de atendimento.</p>
+        </div>
+        <a href="#contato" class="text-brand font-semibold">Ver todos &rarr;</a>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Card 1: Mobile -->
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+          <div class="h-40 bg-gradient-to-br from-indigo-200 via-indigo-400 to-indigo-600 dark:from-indigo-800 dark:via-indigo-700 dark:to-indigo-600"></div>
+          <div class="p-5">
+            <h3 class="font-bold text-xl mb-1">App de Suporte e Vendas</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">Aplicativo Flutter com BLoC, push notifications e checkout integrado. Aumento de 32% na conversão.</p>
+            <ul class="text-sm mb-4 list-disc list-inside text-slate-600 dark:text-slate-300">
+              <li>Flutter • BLoC • Firebase</li>
+              <li>Analytics e A/B</li>
+            </ul>
+            <div class="flex gap-3">
+              <a class="text-brand font-semibold" href="#">Repositório</a>
+              <a class="text-brand font-semibold" href="#">Case</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2: n8n -->
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+          <div class="h-40 bg-gradient-to-br from-emerald-200 via-emerald-400 to-emerald-600 dark:from-emerald-800 dark:via-emerald-700 dark:to-emerald-600"></div>
+          <div class="p-5">
+            <h3 class="font-bold text-xl mb-1">Orquestração com n8n</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">Integração CRM ↔ Planilhas ↔ WhatsApp ↔ ERP com filas e retentativas automáticas.</p>
+            <ul class="text-sm mb-4 list-disc list-inside text-slate-600 dark:text-slate-300">
+              <li>n8n • Webhooks • Filas</li>
+              <li>Observabilidade e Logs</li>
+            </ul>
+            <div class="flex gap-3">
+              <a class="text-brand font-semibold" href="#">Diagrama</a>
+              <a class="text-brand font-semibold" href="#">Post técnico</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: Bots/Whats -->
+        <article class="group rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:shadow-soft transition">
+          <div class="h-40 bg-gradient-to-br from-rose-200 via-rose-400 to-rose-600 dark:from-rose-800 dark:via-rose-700 dark:to-rose-600"></div>
+          <div class="p-5">
+            <h3 class="font-bold text-xl mb-1">Bot de Atendimento WhatsApp</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-300 mb-3">Qualificação de leads, status de pedidos e handoff para equipe humana. SLA < 30s.</p>
+            <ul class="text-sm mb-4 list-disc list-inside text-slate-600 dark:text-slate-300">
+              <li>WhatsApp Business API</li>
+              <li>Dialogflow • NLP</li>
+            </ul>
+            <div class="flex gap-3">
+              <a class="text-brand font-semibold" href="#">Fluxos</a>
+              <a class="text-brand font-semibold" href="#">Demonstração</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Serviços -->
+  <section id="servicos" class="py-20 bg-slate-50 dark:bg-slate-900/40">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl font-extrabold mb-10">Como posso ajudar</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold text-xl mb-2">Apps Mobile</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-4">Aplicativos nativos com Flutter e BLoC, integrações com APIs, autenticação e analytics.</p>
+          <ul class="text-sm list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+            <li>Arquitetura limpa, SOLID</li>
+            <li>Publicação e CI/CD</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold text-xl mb-2">Automação com n8n</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-4">Workflows confiáveis com monitoramento, retries e versionamento.</p>
+          <ul class="text-sm list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+            <li>Integrações SaaS e ERPs</li>
+            <li>Orquestração de filas</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+          <h3 class="font-bold text-xl mb-2">Bots e WhatsApp</h3>
+          <p class="text-slate-600 dark:text-slate-300 mb-4">Chatbots para captação, suporte e vendas com handoff humano.</p>
+          <ul class="text-sm list-disc list-inside space-y-1 text-slate-600 dark:text-slate-300">
+            <li>WhatsApp Business API</li>
+            <li>NLP (Dialogflow)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sobre -->
+  <section id="sobre" class="py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8 items-start">
+      <div class="md:col-span-2">
+        <h2 class="text-3xl font-extrabold mb-4">Sobre mim</h2>
+        <p class="text-slate-600 dark:text-slate-300 leading-relaxed">Sou <strong>Raoni Ferreira</strong>, desenvolvedor com foco em mobile (Flutter + BLoC), automações com n8n e bots para atendimento. Tenho experiência em QA e automação de testes (Selenium, Playwright, Cucumber), o que me ajuda a entregar soluções estáveis e com qualidade.</p>
+        <ul class="mt-4 grid sm:grid-cols-2 gap-3 text-sm text-slate-600 dark:text-slate-300">
+          <li>✅ Experiência com apps de alto tráfego</li>
+          <li>✅ Integrações com ERPs e gateways</li>
+          <li>✅ Monitoramento e observabilidade</li>
+          <li>✅ Segurança e LGPD</li>
+        </ul>
+      </div>
+      <aside class="rounded-2xl border border-slate-200 dark:border-slate-800 p-6">
+        <h3 class="font-semibold mb-3">Certificações & Destaques</h3>
+        <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-300">
+          <li>• Flutter / Dart</li>
+          <li>• QA Automatizado (Playwright / Selenium)</li>
+          <li>• Integrações com WhatsApp Business API</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- CTA Contato -->
+  <section id="contato" class="py-20 bg-gradient-to-br from-slate-50 to-white dark:from-slate-900 dark:to-slate-950 border-t border-slate-200 dark:border-slate-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <h2 class="text-3xl font-extrabold mb-3">Vamos conversar?</h2>
+      <p class="text-slate-600 dark:text-slate-300 mb-8">Me conte sobre seu projeto ou necessidade. Respondo normalmente em até 1 dia útil.</p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+        <!-- Substitua o número com o seu DDI/DDI: 55DDDNNNNNNNN -->
+        <a href="https://wa.me/5599999999999?text=Ol%C3%A1%20Raoni!%20Vim%20do%20seu%20portf%C3%B3lio." target="_blank" rel="noreferrer" class="inline-flex items-center gap-2 bg-brand hover:bg-brand-dark text-white font-semibold py-3 px-5 rounded-xl shadow-soft">WhatsApp</a>
+        <a href="mailto:seuemail@exemplo.com" class="inline-flex items-center gap-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900 font-semibold py-3 px-5 rounded-xl">E-mail</a>
+        <a href="#" class="inline-flex items-center gap-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900 font-semibold py-3 px-5 rounded-xl">Baixar CV (PDF)</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-sm text-slate-500 dark:text-slate-400">
+    <p>© <span id="year"></span> Raoni Ferreira. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Ano dinâmico
+    document.getElementById('year').textContent = new Date().getFullYear()
+    // Tema claro/escuro
+    const toggle = document.getElementById('themeToggle')
+    const root = document.documentElement
+    const current = localStorage.getItem('theme')
+    if (current === 'dark' || (!current && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      root.classList.add('dark')
+    }
+    toggle.addEventListener('click', () => {
+      root.classList.toggle('dark')
+      localStorage.setItem('theme', root.classList.contains('dark') ? 'dark' : 'light')
+    })
+  </script>
+
+  <!-- SEO / Rich Snippets -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Raoni Ferreira",
+    "jobTitle": "Desenvolvedor Mobile e Automação",
+    "url": "https://seudominio.com",
+    "sameAs": ["https://github.com/SEUUSER", "https://www.linkedin.com/in/SEUUSER/"],
+    "knowsAbout": ["Flutter", "n8n", "Chatbots", "WhatsApp Business API", "QA Automatizado"]
+  }
+  </script>
+</body>
+</html>
